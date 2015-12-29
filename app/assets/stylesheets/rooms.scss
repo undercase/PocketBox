@@ -17,9 +17,12 @@ body {
   }
 }
 .masthead.container {
-  background: #fff;
   padding: 0;
   padding-top: 1rem;
+}
+
+.masthead.container .ui.segment {
+  background: #fff;
 }
 
 .masthead.container .ui.segment .row {
