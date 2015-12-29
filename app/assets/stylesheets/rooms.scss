@@ -17,8 +17,13 @@ body {
   }
 }
 .masthead.container {
+  color: $teal;
   padding: 0;
   padding-top: 1rem;
+
+  .ui.header {
+    color: inherit;
+  }
 }
 
 .masthead.container .ui.segment {
