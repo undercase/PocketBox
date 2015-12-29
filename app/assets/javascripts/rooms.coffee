@@ -1,5 +1,5 @@
 ready = ->
-  dispatcher = new WebSocketRails("localhost:3000/websocket")
+  dispatcher = new WebSocketRails("roomrapp-undercase.rhcloud.com/websocket")
   channel = dispatcher.subscribe('speeches')
   channel.bind 'new_speech', (message) ->
     console.log("Recieved message #{message}")
