@@ -46,6 +46,10 @@ body {
   visibility: hidden;
 }
 
+.ui.card .content .header {
+  color: $teal;
+}
+
 .ui.upload.card {
   text-align: center;
   cursor: pointer;
