@@ -54,6 +54,21 @@ body {
     font-size: 1.5rem;
     text-align: center;
     border: 1px solid $teal !important;
+    &::-webkit-input-placeholder {
+       color: $light-teal;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+       color: $light-teal;  
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: $light-teal;  
+    }
+
+    &:-ms-input-placeholder {  
+       color: $light-teal;  
+    }
   }
   
   .ui.button {
