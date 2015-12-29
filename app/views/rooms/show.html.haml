@@ -1,0 +1,21 @@
+#room_id{value: @room.id}
+.ui.masthead.ui.container
+  .ui.vertically.divided.grid.segment
+    .one.column.row
+      .ui.column
+        %h1.ui.header #{@room.name}
+    .one.column.row
+      .ui.column
+        %h3.ui.header Room Code: #{@room.code}
+        %h3.ui.header Speeches: #{@room.speeches.count}
+    .one.column.row
+      .ui.column
+        .ui.stackable.link.four.cards
+          = form_for @speech, url: room_speeches_path(@room.id), method: :post,  html: { multipart: true, class: 'upload form' } do |f|
+            = f.file_field :speech_doc, class: 'speech file'
+          .ui.upload.card{onclick: "$('.speech.file').click();"}
+            .ui.image
+              = image_tag '/assets/prompt.png'
+            .content
+              .center.aligned.header Upload a Speech
+          = render @room.speeches.reject { |s| s == @speech }

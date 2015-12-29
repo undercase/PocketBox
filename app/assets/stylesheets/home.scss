@@ -1,0 +1,52 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@media screen and (min-width: 300px) {
+  .wrapper {
+    height: 100%;
+  }
+
+  .masthead.container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.masthead.container {
+    max-width: 300px !important;
+    box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+    border-radius: 0.25rem;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    padding: 2rem 1rem;
+
+    h1.ui.header {
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+
+    h3.ui.header {
+      margin-top: 0.25rem;
+    }
+
+    form.ui.form {
+      text-align: center;
+    }
+
+    form.ui.form .field input {
+      margin: 1rem 0;
+      border-radius: 0;
+      width: 100%;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    
+    .ui.button {
+      font-size: 1.5rem;
+      width: 100%;
+    }
+
+    .field {
+      margin-bottom: 0;
+    }
+}

@@ -1,0 +1,12 @@
+.ui.middle.aligned.masthead.ui.container
+  %h1.ui.center.aligned.header Roomr
+  %h3.ui.center.aligned.header Speech Docs Made Easy
+  = form_for :room, url: search_path, method: :post, html: { class: 'ui form' } do |f|
+    .field
+      = f.text_field :code, placeholder: 'Room Number'
+    = f.submit 'Go', class: 'ui center aligned basic button'
+  .ui.horizontal.divider Or
+  = form_for @room, html: {class: 'ui form'} do |f|
+    .field
+      = f.text_field :name, placeholder: 'Room Name'
+    = f.submit 'Go', class: 'ui center aligned basic button'

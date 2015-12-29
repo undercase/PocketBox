@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require semantic-ui
+//= require websocket_rails/main
 //= require_tree .
+

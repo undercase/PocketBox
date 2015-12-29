@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  root 'home#index'
+  post '/rooms/search', to: 'rooms#search', as: 'search'
+  resources :rooms, only: [:create, :show] do
+    resources :speeches, only: [:create]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,39 @@
+// Place all the styles related to the Rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@media screen and (min-width: 960px) {
+  .masthead.container {
+    max-width: 50% !important;
+  }
+}
+.masthead.container {
+  padding: 0;
+  padding-top: 1rem;
+}
+
+.masthead.container .ui.segment .row {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.masthead.container .ui.grid .row::before {
+  margin: 0;
+  width: 100%;
+}
+
+.upload.form {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.ui.upload.card {
+  text-align: center;
+  cursor: pointer;
+}
+
+.ui.upload.card .ui.image {
+  margin: auto;
+}
+
