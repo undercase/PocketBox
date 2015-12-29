@@ -15,7 +15,7 @@
             = f.file_field :speech_doc, class: 'speech file'
           .ui.upload.card{onclick: "$('.speech.file').click();"}
             .ui.image
-              = image_tag 'prompt'
+              %img{src: 'https://i.imgur.com/Zx1bnW3.png'}
             .content
               .center.aligned.header Upload a Speech
           = render @room.speeches.reject { |s| s == @speech }
