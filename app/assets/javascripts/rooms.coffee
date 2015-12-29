@@ -1,6 +1,8 @@
 ready = ->
   dispatcher = new WebSocketRails("roomrapp-undercase.rhcloud.com/websocket")
+
   channel = dispatcher.subscribe('speeches')
+
   channel.bind 'new_speech', (message) ->
     console.log("Recieved message #{message}")
     if $("#room_id").attr("value") == message.to_s
@@ -13,6 +15,7 @@ ready = ->
       </div\
       </a>"
       $(".speeches").append
+
   $(".speech.file").on "change", ->
     $(".upload.form").submit()
 
