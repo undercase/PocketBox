@@ -4,9 +4,9 @@
   = form_for :room, url: search_path, method: :post, html: { class: 'ui form' } do |f|
     .field
       = f.text_field :code, placeholder: 'Room Number'
-    = f.submit 'Go', class: 'ui center aligned inverted teal button'
+    = f.submit 'Go to Existing Room', class: 'ui center aligned inverted blue button'
   .ui.horizontal.divider Or
   = form_for @room, html: {class: 'ui form'} do |f|
     .field
       = f.text_field :name, placeholder: 'Room Name'
-    = f.submit 'Go', class: 'ui center aligned inverted teal button'
+    = f.submit 'Make a New Room', class: 'ui center aligned inverted blue button'
