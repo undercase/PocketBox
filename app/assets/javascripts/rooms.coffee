@@ -1,6 +1,6 @@
 ready = ->
 
-  dispatcher = new WebSocketRails("roomrapp-undercase.rhcloud.com/websocket")
+  dispatcher = new WebSocketRails("roomrapp-undercase.rhcloud.com:3001/websocket")
 
   channel = dispatcher.subscribe('speeches')
 
