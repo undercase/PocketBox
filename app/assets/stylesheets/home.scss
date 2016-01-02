@@ -55,10 +55,6 @@ body {
     font-size: 1.5rem;
     text-align: center;
     border: 1px solid $teal !important;
-    &:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px rgba(135, 255, 233, 0.2) inset !important;
-      -webkit-text-fill-color: $teal !important;
-    }
     &::-webkit-input-placeholder {
        color: $light-teal;
     }
