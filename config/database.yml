@@ -1,6 +1,8 @@
-sqlite: &sqlite
-  adapter: sqlite3
-  database: db/<%= Rails.env %>.sqlite3
+sqlite: &development
+  adapter: postgresql
+  database: roomr_development
+  username: "<%=ENV['POSTGRES_USERNAME']%>"
+  password: "<%=ENV['POSTGRES_PASSWORD']%>"
 
 mysql: &mysql
   adapter: mysql2
@@ -24,7 +26,7 @@ defaults: &defaults
   pool: 5
   timeout: 5000
   encoding: utf8
-  <<: *<%= ENV['RAILS_DB'] || "sqlite" %>
+  <<: *<%= ENV['RAILS_DB'] || "development" %>
 
 development:
   <<: *defaults
