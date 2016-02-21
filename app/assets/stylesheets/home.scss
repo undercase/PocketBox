@@ -43,6 +43,13 @@ body {
     margin-top: 0.25rem;
   }
 
+  h5.ui.header {
+    color: inherit;
+    a {
+      color: $light-teal;
+    }
+  }
+
   form.ui.form {
     text-align: center;
   }
@@ -79,5 +86,9 @@ body {
 
   .field {
     margin-bottom: 0;
+  }
+
+  .ui.divider {
+    margin-top: 2rem;
   }
 }

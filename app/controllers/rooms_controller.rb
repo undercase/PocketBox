@@ -1,7 +1,8 @@
 class RoomsController < ApplicationController
   def create
-    code = Array.new(6){rand(36).to_s(36)}.join until Room.where(code: code).empty? && !code.nil?
-    @room = Room.create(room_params.merge({ code: code }))
+    @room = Room.create(room_params)
+    hashids = Hashids.new('footlongchickenteriyaki', 6)
+    @room.update(code: hashids.encode(@room.id))
     redirect_to @room
   end
 

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
+  get 'update' => 'home#info', as: 'info'
   post '/rooms/search', to: 'rooms#search', as: 'search'
   resources :rooms, only: [:create, :show] do
     resources :speeches, only: [:create]

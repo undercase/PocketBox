@@ -3,8 +3,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
+# Use Amazon S3 to Store Speech Docs
+gem 'aws-sdk-v1'
 # Use postgresql as the database for Active Record
 gem 'pg'
+# Use HashIDs to generate codes for rooms
+gem 'hashids'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
