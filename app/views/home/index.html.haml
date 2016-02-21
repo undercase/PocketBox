@@ -1,7 +1,6 @@
 .ui.middle.aligned.masthead.ui.container
-  %h1.ui.center.aligned.header Roomr
-  %h3.ui.center.aligned.header Speech Docs Made Easy
-  %h3.ui.center.aligned.header Made with ♥  by Thomas Hobohm
+  %h1.ui.center.aligned.header PocketBox
+  %h4.ui.center.aligned.header <i>Formerly Roomr</i>
   = form_for :room, url: search_path, method: :post, html: { class: 'ui form' } do |f|
     .field
       = f.text_field :code, placeholder: 'Room Number'
@@ -12,4 +11,4 @@
       = f.text_field :name, placeholder: 'Room Name'
     = f.submit 'Make a New Room', class: 'ui center aligned inverted blue button'
   .ui.inverted.divider
-  %h5.ui.center.aligned.header Roomr's been updated. Read about it #{link_to "here.", info_path}
+  %h5.ui.center.aligned.header PocketBox has been updated. Read about it #{link_to "here.", info_path}
