@@ -1,6 +1,5 @@
 .ui.middle.aligned.masthead.ui.container
   %h1.ui.center.aligned.header PocketBox
-  %h4.ui.center.aligned.header <i>Formerly Roomr</i>
   = form_for :room, url: search_path, method: :post, html: { class: 'ui form' } do |f|
     .field
       = f.text_field :code, placeholder: 'Room Number'
