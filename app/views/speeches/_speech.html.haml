@@ -1,5 +1,5 @@
 = link_to speech.speech_doc.url(:original, false), class: 'ui card' do
   .ui.image
-    %img{src: 'https://i.imgur.com/MCDHvBM.png'}
+    = image_tag 'word.png'
   .content
     .center.aligned.header= speech.speech_doc.original_filename.gsub('.docx', '').gsub('_', ' ')
