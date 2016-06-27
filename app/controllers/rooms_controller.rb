@@ -1,8 +1,11 @@
 class RoomsController < ApplicationController
   def create
-    @room = Room.create(room_params)
-    hashids = Hashids.new('footlongchickenteriyaki', 6)
-    @room.update(code: hashids.encode(@room.id))
+    @room = Room.find_by(code: params[:room][:name])
+    unless @room
+      @room = Room.create(room_params)
+      hashids = Hashids.new('footlongchickenteriyaki', 6)
+      @room.update(code: hashids.encode(@room.id))
+    end
     redirect_to @room
   end
 
