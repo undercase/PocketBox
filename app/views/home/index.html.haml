@@ -8,6 +8,12 @@
   = form_for @room, html: {class: 'ui form'} do |f|
     .field
       = f.text_field :name, placeholder: 'Room Name'
+    - if flash[:error]
+      .outlined.box
+        %h3.ui.center.aligned.header
+          %b Error:
+          = flash[:error]
     = f.submit 'Make a New Room', class: 'ui center aligned inverted blue button'
   .ui.inverted.divider
   %h5.ui.center.aligned.header PocketBox has been updated. Read about it #{link_to "here.", info_path}
+

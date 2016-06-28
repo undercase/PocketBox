@@ -3,10 +3,16 @@ class RoomsController < ApplicationController
     @room = Room.find_by(code: params[:room][:name])
     unless @room
       @room = Room.create(room_params)
-      hashids = Hashids.new('footlongchickenteriyaki', 6)
-      @room.update(code: hashids.encode(@room.id))
+      if not @room.valid?
+        redirect_to root_path, flash: {error: 'Rooms must have names.'}
+      else
+        hashids = Hashids.new('footlongchickenteriyaki', 6)
+        @room.update(code: hashids.encode(@room.id))
+        redirect_to room_path(code: @room.code)
+      end
+    else
+      redirect_to room_path(code: @room.code)
     end
-    redirect_to room_path(code: @room.code)
   end
 
   def show
