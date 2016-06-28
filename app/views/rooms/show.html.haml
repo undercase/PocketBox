@@ -9,7 +9,7 @@
     .one.column.row
       .ui.column
         .ui.stackable.link.four.cards
-          = form_for @speech, url: room_speeches_path(@room.id), method: :post,  html: { multipart: true, class: 'upload form' } do |f|
+          = form_for @speech, url: room_speeches_path(code: @room.code), method: :post,  html: { multipart: true, class: 'upload form' } do |f|
             = f.file_field :speech_doc, class: 'speech file'
           .ui.upload.card{onclick: "$('.speech.file').click();"}
             .ui.image

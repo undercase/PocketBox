@@ -6,18 +6,18 @@ class RoomsController < ApplicationController
       hashids = Hashids.new('footlongchickenteriyaki', 6)
       @room.update(code: hashids.encode(@room.id))
     end
-    redirect_to @room
+    redirect_to room_path(code: @room.code)
   end
 
   def show
-    @room = Room.find(params[:id])
+    @room = Room.find_by(code: params[:code])
     @speech = @room.speeches.new
   end
 
   def search
     @room = Room.find_by(code: params[:room][:code])
     if @room
-      redirect_to @room
+      redirect_to room_path(code: @room.code)
     else
       redirect_to root_path
     end

@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'update' => 'home#info', as: 'info'
   post '/rooms/search', to: 'rooms#search', as: 'search'
-  resources :rooms, only: [:create, :show] do
-    resources :speeches, only: [:create]
-  end
+  post '/rooms', to: 'rooms#create', as: 'rooms'
+  get '/rooms/:code', to: 'rooms#show', as: 'room'
+  post '/rooms/:code/speeches', to: 'speeches#create', as: 'room_speeches'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
