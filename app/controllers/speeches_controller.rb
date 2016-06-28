@@ -1,6 +1,6 @@
 class SpeechesController < ApplicationController
   def create
-    @room = Room.find(params[:code])
+    @room = Room.find(code: params[:code])
     if @room
       @speech = @room.speeches.create(speech_params)
       message = {
