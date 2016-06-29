@@ -16,4 +16,4 @@
               = image_tag 'upload.png'
             .content
               .center.aligned.header Upload a Speech
-          = render @room.speeches.reject { |s| s == @speech }
+          = render @room.speeches.order(created_at: :desc).reject { |s| s == @speech }
