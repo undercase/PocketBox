@@ -9,6 +9,8 @@ gem 'aws-sdk-v1'
 gem 'pg'
 # Use HashIDs to generate codes for rooms
 gem 'hashids'
+# Use Rack-Attack to prevent assholes from abusing the site
+gem 'rack-attack'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
