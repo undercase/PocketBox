@@ -20,7 +20,8 @@ ready = ->
   $(".speech.file").on "change", ->
     $(".upload.form").submit()
 
-  $(".view.button").click (event) ->
+  $(".view.button").unbind('click').click (event) ->
+    console.log('called')
     window.open("http://docs.google.com/gview?url=" + $(this).closest(".ui.card").attr("href"))
     event.preventDefault()
 
