@@ -8,7 +8,7 @@
           %h3.ui.header &nbsp;&nbsp;#{@room.code}
     .one.column.row
       .ui.column
-        .ui.stackable.link.four.cards
+        .ui.stackable.doubling.link.four.cards
           = form_for @speech, url: room_speeches_path(code: @room.code), method: :post,  html: { multipart: true, class: 'upload form' } do |f|
             = f.file_field :speech_doc, class: 'speech file'
           .ui.upload.card{onclick: "$('.speech.file').click();"}

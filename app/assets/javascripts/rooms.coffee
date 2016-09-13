@@ -20,5 +20,9 @@ ready = ->
   $(".speech.file").on "change", ->
     $(".upload.form").submit()
 
+  $(".view.button").click (event) ->
+    window.open("http://docs.google.com/gview?url=" + $(this).closest(".ui.card").attr("href"))
+    event.preventDefault()
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

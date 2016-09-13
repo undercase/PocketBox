@@ -3,3 +3,6 @@
     = image_tag 'document.png'
   .content
     .center.aligned.header= speech.speech_doc.original_filename.gsub('.docx', '').gsub('_', ' ').gsub('.pdf', '').gsub('-', ' ')
+  .ui.bottom.attached.two.buttons
+    .ui.primary.view.basic.button View
+    .ui.primary.basic.button Download

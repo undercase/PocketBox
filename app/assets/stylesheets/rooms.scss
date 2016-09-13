@@ -90,11 +90,6 @@ body {
 .ui.card:hover {
   .content {
     border-radius: 0 !important;
-    color: #fff !important;
-    background: $teal !important;
-    .header {
-      color: #fff !important;
-    }
   }
 }
 
@@ -112,13 +107,33 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  .buttons {
+    border: rgba(0, 0, 0, 0.15) 1px solid;
+    border-left: rgba(0, 0, 0, 0.07) 1px solid;
+    border-right: rgba(0, 0, 0, 0.07) 1px solid;
+    .primary.button {
+      background: #fff !important;
+      color: $teal !important;
+      border-radius: 0 !important;
+
+      &:hover {
+        color: #fff !important;
+        background: $teal !important;
+      }
+
+      &:first-child {
+        border-right: 1px solid rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
 }
 
 .ui.upload.card {
   text-align: center;
   cursor: pointer;
 
-  border-radius: 3px;
+  border-radius: 6px !important;
   border: 2px dashed $teal;
   box-shadow: none;
 
