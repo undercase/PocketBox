@@ -3,12 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background: -moz-linear-gradient(45deg, rgba(0,200,248,1) 0%, rgba(0,200,248,1) 1%, rgba(135,255,233,1) 100%); /* ff3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0,200,248,1)), color-stop(1%, rgba(0,200,248,1)), color-stop(100%, rgba(135,255,233,1))); /* safari4+,chrome */
-  background: -webkit-linear-gradient(45deg, rgba(0,200,248,1) 0%, rgba(0,200,248,1) 1%, rgba(135,255,233,1) 100%); /* safari5.1+,chrome10+ */
-  background: -o-linear-gradient(45deg, rgba(0,200,248,1) 0%, rgba(0,200,248,1) 1%, rgba(135,255,233,1) 100%); /* opera 11.10+ */
-  background: -ms-linear-gradient(45deg, rgba(0,200,248,1) 0%, rgba(0,200,248,1) 1%, rgba(135,255,233,1) 100%); /* ie10+ */
-  background: linear-gradient(45deg, rgba(0,200,248,1) 0%, rgba(0,200,248,1) 1%, rgba(135,255,233,1) 100%); /* w3c */
+  background: #fff;
 }
 
 @media screen and (min-width: 960px) {
@@ -16,14 +11,53 @@ body {
     max-width: 960px;
   }
 }
+
+#room_id {
+  display: none;
+}
+
+.ui.menu {
+  background: $teal !important;
+  color: #fff;
+
+  padding: 0 1rem;
+  margin-bottom: 0;
+
+
+  h1.ui.header {
+    color: #fff;
+    font-size: 2.5rem;
+  }
+
+  h3.ui.header {
+    color: #fff;
+  }
+
+  @media screen and (min-width: 980px) {
+    .item h1.ui.header {
+      font-size: 3.5rem;
+    }
+  }
+
+}
+
 .masthead.container {
   color: $teal;
   padding: 0;
-  padding-top: 1rem;
 
   .ui.header {
     color: inherit;
     display: inline;
+  }
+
+  @media screen and (min-width: 980px) {
+    h1.ui.header {
+      font-size: 3rem;
+    }
+
+    h3.ui.header {
+      font-size: 1.5rem;
+    }
   }
 
   h3.ui.header {
@@ -33,6 +67,8 @@ body {
 
 .masthead.container .ui.segment {
   background: #fff;
+  border: none;
+  box-shadow: none;
 }
 
 .masthead.container .ui.segment .row {
@@ -51,15 +87,61 @@ body {
   visibility: hidden;
 }
 
-.ui.card .content .header {
+.ui.card:hover {
+  .content {
+    border-radius: 0 !important;
+    color: #fff !important;
+    background: $teal !important;
+    .header {
+      color: #fff !important;
+    }
+  }
+}
+
+.ui.card {
+  color: $teal;
+  border-radius: 0 !important;
+  .header {
+    color: $teal !important;
+    overflow: hidden;
+  }
+  .content {
+    border-radius: 0 !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .ui.upload.card {
   text-align: center;
   cursor: pointer;
+
+  border-radius: 3px;
+  border: 2px dashed $teal;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none !important;
+    border: 2px dashed $teal !important;
+
+    .content {
+      background: #fff !important;
+      .header {
+        color: $teal !important;
+      }
+    }
+  }
 }
 
 .ui.upload.card .ui.image {
   margin: auto;
+}
+
+@media screen and (min-width: 980px) {
+  .ui.card .header {
+    font-size: 1.5rem !important;
+  }
 }
 

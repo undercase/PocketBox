@@ -3,14 +3,10 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-# Use Amazon S3 to Store Speech Docs
-gem 'aws-sdk-v1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use HashIDs to generate codes for rooms
 gem 'hashids'
-# Use Rack-Attack to prevent assholes from abusing the site
-gem 'rack-attack'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
@@ -41,6 +37,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+#
+group :production do
+  # Use Rack-Attack to prevent assholes from abusing the site
+  gem 'rack-attack'
+  # Use Amazon S3 to Store Speech Docs
+  gem 'aws-sdk-v1'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

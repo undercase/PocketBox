@@ -10,5 +10,14 @@
     = javascript_include_tag 'rooms', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    .ui.secondary.menu
+      .ui.container
+        = link_to url_for(root_path), class: 'item' do
+          %h1.ui.header PocketBox
+        .right.menu
+          = link_to url_for(root_path), class: 'item' do
+            %h3.ui.header Create a Room
+          = link_to url_for(root_path), class: 'item' do
+            %h3.ui.header Go to a Room
     .wrapper
       = yield

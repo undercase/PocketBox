@@ -3,19 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background: -moz-linear-gradient(45deg, rgba(0,200,248,1) 0%, rgba(0,200,248,1) 1%, rgba(135,255,233,1) 100%); /* ff3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0,200,248,1)), color-stop(1%, rgba(0,200,248,1)), color-stop(100%, rgba(135,255,233,1))); /* safari4+,chrome */
-  background: -webkit-linear-gradient(45deg, rgba(0,200,248,1) 0%, rgba(0,200,248,1) 1%, rgba(135,255,233,1) 100%); /* safari5.1+,chrome10+ */
-  background: -o-linear-gradient(45deg, rgba(0,200,248,1) 0%, rgba(0,200,248,1) 1%, rgba(135,255,233,1) 100%); /* opera 11.10+ */
-  background: -ms-linear-gradient(45deg, rgba(0,200,248,1) 0%, rgba(0,200,248,1) 1%, rgba(135,255,233,1) 100%); /* ie10+ */
-  background: linear-gradient(45deg, rgba(0,200,248,1) 0%, rgba(0,200,248,1) 1%, rgba(135,255,233,1) 100%); /* w3c */
+  background: #fff;
 }
 
 @media screen and (min-width: 300px) {
   .wrapper {
     height: 100%;
   }
+}
 
+@media screen and (min-height: 550px) {
   .masthead.container {
     position: relative;
     top: 50%;
@@ -27,9 +24,6 @@ body {
   background: #fff;
   color: $teal;
   max-width: 300px !important;
-  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
-  border-radius: 0.25rem;
-  border: 1px solid rgba(34, 36, 38, 0.15);
   padding: 2rem 1rem;
 
   h1.ui.header {
@@ -112,6 +106,7 @@ body {
 
   .ui.divider {
     margin-top: 2rem;
+    color: $teal;
   }
 }
 
