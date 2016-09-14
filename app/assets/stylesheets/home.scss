@@ -98,6 +98,13 @@ body {
   .ui.button {
     font-size: 1.5rem;
     width: 100%;
+
+    background: rgba(58, 192, 255, 0.8);
+    color: #fff;
+
+    &:hover {
+      background: rgba(58, 192, 255, 1);
+    }
   }
 
   .field {
