@@ -21,8 +21,16 @@ ready = ->
     $(".upload.form").submit()
 
   $(".view.button").unbind('click').click (event) ->
-    console.log('called')
     window.open("http://docs.google.com/gview?url=" + $(this).closest(".ui.card").attr("href"))
+    event.preventDefault()
+
+  $("i.remove.icon").unbind('click').click (event) ->
+    console.log($(this).attr('ajax_url'))
+    $.ajax({
+      url: $(this).attr('ajax_url'),
+      type: 'DELETE'
+    })
+    $(this).closest('.ui.card').fadeOut()
     event.preventDefault()
 
 $(document).ready(ready)

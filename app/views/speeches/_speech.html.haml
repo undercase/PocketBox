@@ -1,4 +1,5 @@
 = link_to speech.speech_doc.url(:original, false), class: 'ui card' do
+  %i.remove.big.icon{ajax_url: "#{delete_room_speeches_url(code: speech.room.code, speech_id: speech.id)}"}
   .ui.image
     = image_tag 'document.png'
   .content
@@ -6,3 +7,5 @@
   .ui.bottom.attached.two.buttons
     .ui.primary.view.basic.button View
     .ui.primary.basic.button Download
+
+

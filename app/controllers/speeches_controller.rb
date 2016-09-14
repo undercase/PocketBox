@@ -15,6 +15,23 @@ class SpeechesController < ApplicationController
     end
   end
 
+  def destroy
+    @room = Room.find_by(code: params[:code])
+    if @room
+      @speech = Speech.find(params[:speech_id])
+      if @speech
+        @speech.destroy
+      end
+      redirect_to room_path(code: @room.code)
+    else
+      redirect_to root_path
+    end
+  end
+
+  def delete
+    @room
+  end
+
   private
 
   def speech_params

@@ -96,6 +96,26 @@ body {
 .ui.card {
   color: $teal;
   border-radius: 0 !important;
+
+  i.remove.icon {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    z-index: 1000;
+    color: $teal;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    font-size: 2rem;
+  }
+
+  &:hover i.remove.icon {
+    opacity: 0.5;
+  }
+
+  i.remove.icon:hover {
+    opacity: 1;
+  }
+
   .header {
     color: $teal !important;
     overflow: hidden;

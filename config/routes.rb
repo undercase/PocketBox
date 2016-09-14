@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/rooms', to: 'rooms#create', as: 'rooms'
   get '/rooms/:code', to: 'rooms#show', as: 'room'
   post '/rooms/:code/speeches', to: 'speeches#create', as: 'room_speeches'
+  delete '/rooms/:code/speeches/:speech_id', to: 'speeches#destroy', as: 'delete_room_speeches'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
