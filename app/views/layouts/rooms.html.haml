@@ -15,9 +15,9 @@
         = link_to url_for(root_path), class: 'item' do
           %h1.ui.header PocketBox
         .right.menu
-          = link_to url_for(root_path), class: 'item' do
-            %h3.ui.header Create a Room
-          = link_to url_for(root_path), class: 'item' do
-            %h3.ui.header Go to a Room
+          = link_to url_for(about_path), class: 'item' do
+            %h3.ui.header About
+          = link_to url_for(about_path), class: 'item' do
+            %h3.ui.header Contact Us
     .wrapper
       = yield

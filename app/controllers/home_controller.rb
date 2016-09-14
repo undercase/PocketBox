@@ -3,6 +3,6 @@ class HomeController < ApplicationController
   def index
     @room = Room.new
   end
-  def info
+  def about
   end
 end

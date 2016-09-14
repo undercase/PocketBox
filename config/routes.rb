@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
-  get 'update' => 'home#info', as: 'info'
+  get 'about' => 'home#about', as: 'about'
   post '/rooms/search', to: 'rooms#search', as: 'search'
   post '/rooms', to: 'rooms#create', as: 'rooms'
   get '/rooms/:code', to: 'rooms#show', as: 'room'
