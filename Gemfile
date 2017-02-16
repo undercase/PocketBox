@@ -42,7 +42,7 @@ group :production do
   # Use Rack-Attack to prevent assholes from abusing the site
   gem 'rack-attack'
   # Use Amazon S3 to Store Speech Docs
-  gem 'aws-sdk-v1'
+  gem 'aws-sdk'
 end
 
 group :development, :test do
